@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WatcherUI" GeneratedClassName="GeneralSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ahkLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\cosmi\OneDrive\Desktop\esoAHK.ahk</Value>
+    </Setting>
+    <Setting Name="exeLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\binaries\esoAHK.exe</Value>
+    </Setting>
+    <Setting Name="ahkCompilerLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

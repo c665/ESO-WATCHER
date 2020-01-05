@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "watcher", "watcher\watcher.csproj", "{CE74269B-4AF8-4157-85B7-745E1A616323}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatcherUI", "WatcherUI\WatcherUI.csproj", "{885BCEFF-3B8F-4CF5-AF2D-CF05E23CB866}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE74269B-4AF8-4157-85B7-745E1A616323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE74269B-4AF8-4157-85B7-745E1A616323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE74269B-4AF8-4157-85B7-745E1A616323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE74269B-4AF8-4157-85B7-745E1A616323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{885BCEFF-3B8F-4CF5-AF2D-CF05E23CB866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885BCEFF-3B8F-4CF5-AF2D-CF05E23CB866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885BCEFF-3B8F-4CF5-AF2D-CF05E23CB866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{885BCEFF-3B8F-4CF5-AF2D-CF05E23CB866}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8474C5BA-7AC6-4276-BECD-5668B8CE75E0}
+	EndGlobalSection
+EndGlobal

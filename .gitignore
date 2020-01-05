@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/watcher/v15
+/packages
+/WatcherUI/bin
+/WatcherUI/obj
+/watcher

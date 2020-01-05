@@ -1,0 +1,88 @@
+﻿<Controls:MetroWindow x:Class="WatcherUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WatcherUI"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="THE WATCHER" Height="281" Width="343"
+        Icon="ourourouroborous.ico"
+        ShowIconOnTitleBar="True" 
+        Controls:ControlsHelper.ContentCharacterCasing="Upper" 
+        ResizeMode="CanMinimize">
+
+    <!--<Controls:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <iconPacks:PackIconMaterial Width="{TemplateBinding Width}" 
+                                   Height="{TemplateBinding Height}" 
+                                   Margin="4" 
+                                   Foreground="{DynamicResource IdealForegroundColorBrush}" 
+                                   Kind="Box" />
+        </DataTemplate>
+    </Controls:MetroWindow.IconTemplate>-->
+
+    <Grid Background="Black">
+        <GroupBox Header="ESO - AutoHotkey Script" HorizontalAlignment="Left" Height="195" Margin="10,10,0,0" VerticalAlignment="Top" Width="318" Controls:ControlsHelper.ContentCharacterCasing="Upper" Controls:ControlsHelper.HeaderFontWeight="SemiBold" Controls:ControlsHelper.HeaderFontStretch="Expanded">
+            <Grid HorizontalAlignment="Right" VerticalAlignment="Top">
+                <TextBlock Text="ahk Compiler&gt;" Margin="212,-25,20,168"/>
+                <iconPacks:PackIconRPGAwesome x:Name="_ahkCompilerLocationBrowseButton" Kind="Axe" Height="15" Width="15" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-25,0,0" MouseDoubleClick="_ahkCompilerLocationBrowseButton_MouseDoubleClick"/>
+                <GroupBox Header=".ahk Location" Controls:ControlsHelper.ContentCharacterCasing="Normal" Controls:ControlsHelper.HeaderFontWeight="SemiBold" Controls:ControlsHelper.HeaderFontStretch="Expanded" Height="60" VerticalAlignment="Top">
+                    <Grid>
+                        <TextBox x:Name="_ahkLocationTextBox" Margin="0,0,60,-1"></TextBox>
+                        <Button x:Name="_ahkLocationBrowseButton"  HorizontalAlignment="Right" Width="55" Height="25" VerticalAlignment="Top" Click="_ahkLocationBrowseButton_Click">Browse</Button>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header=".exe Location" Controls:ControlsHelper.ContentCharacterCasing="Normal" Controls:ControlsHelper.HeaderFontWeight="SemiBold" Controls:ControlsHelper.HeaderFontStretch="Expanded" Height="60" VerticalAlignment="Top" Margin="0,65,0,0">
+                    <Grid>
+                        <TextBox x:Name="_exeLocationTextBox" Margin="0,0,60,-1"/>
+                        <Button x:Name="_exeLocationBrowseButton" HorizontalAlignment="Right" Width="55" Height="25" VerticalAlignment="Top" Content="Browse" Click="_exeLocationBrowseButton_Click"/>
+                    </Grid>
+                </GroupBox>
+                <Button x:Name="_exeCompileButton"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,128,208,0" Width="100" Height="32" Click="_exeCompileButton_Click">Compile Script</Button>
+                <StackPanel VerticalAlignment="Bottom" Orientation="Vertical" Margin="101,0,100,0">
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock Text="ESO Process:" Padding="0,0,16,0"></TextBlock>
+                        <iconPacks:PackIconEvaIcons x:Name="_esoProcessStatusIcon" Kind="QuestionMarkCircleOutline" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                            <iconPacks:PackIconEvaIcons.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.9" ScaleY="0.9"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </iconPacks:PackIconEvaIcons.RenderTransform>
+                        </iconPacks:PackIconEvaIcons>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock Text="AHK Process:" Padding="0,0,14,0"></TextBlock>
+                        <iconPacks:PackIconEvaIcons x:Name="_ahkProcessStatusIcon" Kind="QuestionMarkCircleOutline" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                            <iconPacks:PackIconEvaIcons.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="0.9" ScaleY="0.9"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </iconPacks:PackIconEvaIcons.RenderTransform>
+                        </iconPacks:PackIconEvaIcons>
+                    </StackPanel>
+                </StackPanel>
+                <Button x:Name="_watcherButton" HorizontalAlignment="Center" Margin="208,128,0,0" Width="100" Click="_watcherButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterialDesign x:Name="_watcherButtonIcon" Kind="BlurOff"></iconPacks:PackIconMaterialDesign>
+                        <TextBlock x:Name="_watcherButtonText" Text="Watcher OFF" Margin="5,0,0,0"></TextBlock>
+                    </StackPanel>
+                </Button>
+                <iconPacks:PackIconBoxIcons Kind="SolidNotepad" Margin="285,5,0,0" MouseDoubleClick="PackIconBoxIcons_MouseDoubleClick"/>
+            </Grid>
+        </GroupBox>
+
+        <Grid x:Name="_loading" Background="#66000000" Visibility="Hidden">
+            <iconPacks:PackIconRPGAwesome x:Name="_loadingShield" Kind="RoundShield" HorizontalAlignment="Center" VerticalAlignment="Center" Height="124" Padding="8,8,8,8" Margin="106,44,107,44" Width="124" Spin="True"/>
+        </Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="130,215,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+    </Grid>
+</Controls:MetroWindow>
